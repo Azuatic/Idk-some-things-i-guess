@@ -98,6 +98,9 @@ end)()
 task.wait(0.5)
 end
 
+if shared.autoreportloaded == true then coroutine.wrap(notify)("Auto report already loaded") return end
+shared.autoreportloaded = true
+
 local function findText(msg, textsToFind)
 	for i,v in pairs(textsToFind) do
 		if string.find(msg:lower(), v) then
