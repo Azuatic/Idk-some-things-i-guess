@@ -112,7 +112,7 @@ end
 local whitelisted = {
     "hadi10041",
     "Load_Lua",
-    "OwlCodes",
+    "OwlCodes"
 }
 
 notify("Loading Auto Report")
@@ -134,13 +134,13 @@ local function AutoReport(target)
 
     plr.Chatted:Connect(function(msg)
         if plr ~= nil and v ~= game.Players.LocalPlayer then
-            if findText(msg, {"script", "exploiter", "scripter", "hacker"}) then
+            if findText(msg, {"script"}) then
                 game.Players:ReportAbuse(plr, "Cheating/Exploiting", "")
                 notify("Reported "..plr.DisplayName.." for hacking.")
-            elseif findText(msg, {"hacks", "exploits"}) then
-                game.Players:ReportAbuse(plr, "Scamming", "Scamming and exploiting")
+            elseif findText(msg, {"hacks", "exploits", "hacker", "exploiter", "scripter"}) then
+                game.Players:ReportAbuse(plr, "Scamming", "")
                 notify("Reported "..plr.DisplayName.." for scamming.")
-            elseif findText(msg, {"L", "bozo", "clowwn", "trash", "noob", "bad", "haha", "gay", "kid", "poop", "dummy", "nigga", "black", "negro"})then
+            elseif findText(msg, {"L", "bozo", "clown", "trash", "noob", "bad", "haha", "gay", "kid", "poop", "dummy", "nigga", "black", "sucks"}) and findText(msg, {"hacker", "exploiter", "scripter"}) or findText(msg, {"fatherless", "imagine hacking"}) then
                 game.Players:ReportAbuse(plr, "Bullying", "")
                 notify("Reported "..plr.DisplayName.." for bullying.")
             elseif findText(msg, {"hot", "papi", "daddy", "do me"})then
