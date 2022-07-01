@@ -110,7 +110,9 @@ local function findText(msg, textsToFind)
 end
 
 local whitelisted = {
-    "hadi10041"
+    "hadi10041",
+    "Load_Lua",
+    "OwlCodes",
 }
 
 notify("Loading Auto Report")
