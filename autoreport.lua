@@ -140,8 +140,7 @@ local function AutoReport(target)
             elseif findText(msg, {"hacks", "exploits", "hacker", "exploiter", "scripter"}) then
                 game.Players:ReportAbuse(plr, "Scamming", "")
                 notify("Reported "..plr.DisplayName.." for scamming.")
-            elseif findText(msg, {"L", "bozo", "clown", "trash", "noob", "bad", "haha", "gay", "kid", "poop", "dummy", "nigga", "black", "sucks"}) and findText(msg, {"hacker", "exploiter", "scripter"}) or findText(msg, {"fatherless", "imagine hacking"}) or findText(msg, {"L", "bozo", "clown", "trash", "noob", "bad", "haha", "gay", "kid", "poop", "dummy", "nigga", "black", "sucks"}) and not findText(msg, {"hacker", "exploiter", "scripter"}) then
-                game.Players:ReportAbuse(plr, "Bullying", "")
+            elseif findText(msg, {"L", "bozo", "clown", "trash", "noob", "bad", "haha", "gay", "kid", "poop", "dummy", "nigga", "black", "sucks", "goofy"}) or findText(msg, {"fatherless", "imagine hacking"}) then
                 notify("Reported "..plr.DisplayName.." for bullying.")
             elseif findText(msg, {"hot", "papi", "daddy", "do me"})then
                 game.Players:ReportAbuse(plr, "Dating", "")
