@@ -7,8 +7,8 @@ local userInputService = game:GetService("UserInputService")
 function core(v)
     _G.HeadSize = 7
 
-    userInputService.InputBegan:Connect(function(input, chatting)
-        if input.KeyCode == Enum.KeyCode.T and not chatting then
+    mouse.KeyDown:connect(function(key)
+        if key == bind1 then
             pcall(function()
                 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
                 v.Character.HumanoidRootPart.Transparency = 0.7
@@ -16,7 +16,7 @@ function core(v)
                 v.Character.HumanoidRootPart.Material = "Neon"
                 v.Character.HumanoidRootPart.CanCollide = false
             end)
-        elseif input.KeyCode == Enum.KeyCode.P and not chattings then
+        elseif key == bind2 then
             pcall(function()
                 v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
                 v.Character.HumanoidRootPart.Transparency = 1
