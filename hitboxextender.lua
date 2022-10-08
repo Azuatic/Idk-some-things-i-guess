@@ -8,7 +8,7 @@ function core(v)
     _G.HeadSize = 7
 
     userInputService.InputBegan:Connect(function(input, chatting)
-        if input.KeyCode == Enum.KeyCode.T then
+        if input.KeyCode == Enum.KeyCode.T and not chatting then
             pcall(function()
                 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
                 v.Character.HumanoidRootPart.Transparency = 0.7
@@ -16,7 +16,7 @@ function core(v)
                 v.Character.HumanoidRootPart.Material = "Neon"
                 v.Character.HumanoidRootPart.CanCollide = false
             end)
-        elseif input.KeyCode == Enum.KeyCode.P then
+        elseif input.KeyCode == Enum.KeyCode.P and not chattings then
             pcall(function()
                 v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
                 v.Character.HumanoidRootPart.Transparency = 1
