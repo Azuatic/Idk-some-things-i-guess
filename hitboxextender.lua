@@ -1,3 +1,4 @@
+game.Players.LocalPlayer.CharacterAdded:Wait()
 --// Variables
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "yeet", Text = "t = Enabled : p = disabled."})
 local userInputService = game:GetService("UserInputService")
