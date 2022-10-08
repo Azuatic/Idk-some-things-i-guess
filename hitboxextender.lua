@@ -2,6 +2,7 @@ task.wait(5)
 --// Variables
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "yeet", Text = "t = Enabled : p = disabled."})
 local userInputService = game:GetService("UserInputService")
+local mouse = game.Players.LocalPlayer:GetMouse()
 
 --// Main Script
 function core(v)
