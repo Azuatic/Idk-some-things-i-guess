@@ -8,7 +8,7 @@ local mouse = game.Players.LocalPlayer:GetMouse()
 function core(v)
     _G.HeadSize = 7
 
-    userInputService.InputBegan:Connect(function(input)
+    userInputService.InputBegan:Connect(function(input, chatting)
         if input.KeyCode == Enum.KeyCode.T and not chatting then
             pcall(function()
                 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
