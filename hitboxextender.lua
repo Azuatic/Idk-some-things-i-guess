@@ -1,8 +1,10 @@
-task.wait(2.5)
 --// Variables
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "yeet", Text = "t = Enabled : p = disabled."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Extended Hitbox", Text = "Press T to enable and P to disable."})
+
 local userInputService = game:GetService("UserInputService")
 local mouse = game.Players.LocalPlayer:GetMouse()
+
+_G.Enabled = false
 
 --// Main Script
 function core(v)
@@ -11,6 +13,8 @@ function core(v)
     userInputService.InputBegan:Connect(function(input, chatting)
         if input.KeyCode == Enum.KeyCode.T and not chatting then
             pcall(function()
+                _G.Enabled = true
+
                 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
                 v.Character.HumanoidRootPart.Transparency = 0.7
                 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
@@ -19,6 +23,8 @@ function core(v)
             end)
         elseif input.KeyCode == Enum.KeyCode.P and not chatting then
             pcall(function()
+                _G.Enabled = false
+
                 v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
                 v.Character.HumanoidRootPart.Transparency = 1
                 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Medium stone grey")
