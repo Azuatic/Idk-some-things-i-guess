@@ -3,6 +3,8 @@
 Rayfield Interface Suite
 by Sirius
 
+Slightly customized version for Comet Hub
+
 shlex | Designing + Programming
 iRay  | Programming
 
