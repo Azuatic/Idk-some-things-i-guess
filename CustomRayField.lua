@@ -2389,6 +2389,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	TweenService:Create(Topbar.Hide, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {ImageTransparency = 0.8}):Play()
 	wait(0.3)
 
+	Topbar.Theme:Destroy()
 	return Window
 end
 
