@@ -2461,3 +2461,5 @@ function RayfieldLibrary:LoadConfiguration()
 		end)
 	end
 end
+
+return RayfieldLibrary
