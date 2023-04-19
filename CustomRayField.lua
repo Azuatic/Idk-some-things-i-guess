@@ -1070,6 +1070,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 						end
 						RayfieldLibrary:Notify({Title = "Key System", Content = "The key for this script has been saved successfully"})
 					end
+						
+					KeyUI:Destroy()
 				else
 					if AttemptsRemaining == 0 then
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundTransparency = 1}):Play()
@@ -1085,8 +1087,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 						TweenService:Create(KeyMain.NoteMessage, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 						TweenService:Create(KeyMain.Hide, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
 						wait(0.45)
-						game.Players.LocalPlayer:Kick("No Attempts Remaining")
-						game:Shutdown()
+						game.Players.LocalPlayer:Kick("Failed all key attempts.")
 					end
 					KeyMain.Input.InputBox.Text = ""
 					AttemptsRemaining = AttemptsRemaining - 1
