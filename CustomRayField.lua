@@ -157,6 +157,7 @@ local TabList = Main.TabList
 
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
+LoadingFrame.Version.TextYAlignment = Enum.TextYAlignment.Bottom
 
 
 -- Variables
