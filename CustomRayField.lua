@@ -1123,7 +1123,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Passthrough = true
 		end
 	end
-	if Settings.KeySystem then
+	if not Settings.KeySystem then
 		repeat wait() until Passthrough
 	end
 
