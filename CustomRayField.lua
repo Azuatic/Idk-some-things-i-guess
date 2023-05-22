@@ -886,6 +886,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Rayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius"
 	LoadingFrame.Subtitle.TextScaled = false
+	LoadingFrame.Subtitle.TextWrapped = false
 	LoadingFrame.Version.Text = "Version "..getgenv().version or "NULL"
 	Topbar.Visible = false
 	Elements.Visible = false
